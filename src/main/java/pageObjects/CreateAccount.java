@@ -43,8 +43,10 @@ public class CreateAccount extends ReusableMethods {
     }
 
     public PersonalData EnterEmailANDCreateAccount(String EmailID){
+        int count=3;
+        String randomvalue=getAlphaNumericString(count);
         getTextboxEmailAddress();
-        getTextboxEmailAddress().sendKeys(EmailID);
+        getTextboxEmailAddress().sendKeys(EmailID+randomvalue);
         btnCreateAccount.click();
        personalData = new PersonalData(driver);
        return personalData;
