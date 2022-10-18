@@ -51,7 +51,16 @@ public class CreateAccount extends ReusableMethods {
        personalData = new PersonalData(driver);
        return personalData;
     }
-
+    public PersonalData SignInByCreatingAnAccount(){
+        String EmailID="yd276vijay@gmail.com";
+        int count=3;
+        String randomvalue=getAlphaNumericString(count);
+        getTextboxEmailAddress();
+        getTextboxEmailAddress().sendKeys(EmailID+randomvalue);
+        btnCreateAccount.click();
+        personalData = new PersonalData(driver);
+        return personalData;
+    }
     public HomePage performSignInOperation(String username, String passwd){
         waitForElementsToAcceptClick(textboxEmailToSign);
         textboxEmailToSign.sendKeys(username);

@@ -37,9 +37,11 @@ public class ReusableMethods {
         js.executeScript("arguments[0].click();",element);
     }
 
+
     public void sendDataUsingJavScriptExecutor(String valuetoSend,WebElement element){
         js.executeScript("arugments[0].value='"+valuetoSend+"';",element);
     }
+
 
 
     // function to generate a random string of length n

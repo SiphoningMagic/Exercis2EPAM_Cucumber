@@ -16,13 +16,19 @@ public class LandingPage extends ReusableMethods {
     }
 
 
-
     @FindBy(xpath = "//a[contains(text(),'Sign in')]")
     WebElement btnSignIn;
+
+
 
     public void clickOnSignInBUtton(){
         waitForElementsToAcceptClick(btnSignIn);
         clickUsingJavaScriptExecutor(btnSignIn);
+    }
+
+    public String getTitleofPage(){
+        waitTillVisisbilityOfElement(btnSignIn);
+        return driver.getTitle();
     }
 
 
